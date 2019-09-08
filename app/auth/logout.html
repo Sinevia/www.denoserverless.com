@@ -1,0 +1,37 @@
+---
+layout: guest/layout.html
+title: Logout
+---
+
+<!-- START: Content -->
+<div class="container">
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-md-12" style="margin:0 auto;">
+            <!-- START: Message Area -->
+            <div class="form-group">
+                <div class="alert alert-success">
+                    <a class="close" data-dismiss='alert'>×</a>
+                    <strong>Success</strong>
+                    <span class="successMessage">
+                        You have been logged out
+                    </span>
+                </div>
+            </div>
+            <!-- END: Message Area -->
+        </div>
+    </div>
+</div>
+<!-- END: Content -->
+
+<script>
+    $(function () {
+        $$.setUser(null);
+        $$.setToken(null);
+        setTimeout(function () {
+            $$.to('/');
+        }, 3000);
+    });
+</script>

@@ -43,7 +43,7 @@ module.exports = function (config) {
       output: "docs",
       data: `_data/${env}`
     },
-    templateFormats: ["njk", "html", "js", "md", "11ty.js"],
+    templateFormats: ["njk", "html", "md", "11ty.js", "js", "css", "ico"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true

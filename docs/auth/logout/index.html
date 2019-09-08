@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Home : Deno Serverless</title>
+    <title>Logout : Deno Serverless</title>
     <link rel="shortcut icon" href="../favicon.ico" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/shared/css/main.css" rel="stylesheet" />
@@ -95,34 +95,38 @@
             <td class="Content" align="left" valign="top" style="">
                 <!-- START: Main Content -->
                 
+<!-- START: Content -->
+<div class="container">
+    <br />
+    <br />
 
-<style>
-    section#SectionHero {
-        padding: 40px;
-        background: #efe;
-    }
+    <div class="row">
+        <div class="col-md-12" style="margin:0 auto;">
+            <!-- START: Message Area -->
+            <div class="form-group">
+                <div class="alert alert-success">
+                    <a class="close" data-dismiss='alert'>×</a>
+                    <strong>Success</strong>
+                    <span class="successMessage">
+                        You have been logged out
+                    </span>
+                </div>
+            </div>
+            <!-- END: Message Area -->
+        </div>
+    </div>
+</div>
+<!-- END: Content -->
 
-    section#SectionEnroll {
-        padding: 40px;
-        background: white;
-    }
-</style>
-<section id="SectionHero">
-    <div class="container">
-        <h1>
-            Build Serverless Apps with Deno
-        </h1>
-    </div>
-</section>
-<section id="SectionEnroll">
-    <div class="container">
-        <p>
-            <a href="https://forms.gle/uRJgBQ9b3sbZihzM8" target="_blank">
-                Express interest to be informed when the service starts
-            </a>
-        </p>
-    </div>
-</section>
+<script>
+    $(function () {
+        $$.setUser(null);
+        $$.setToken(null);
+        setTimeout(function () {
+            $$.to('/');
+        }, 3000);
+    });
+</script>
                 <!-- END: Main Content -->
             </td>
         </tr>
