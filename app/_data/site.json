@@ -1,0 +1,11 @@
+{
+    "title": "Deno Serverless",
+    "url": "https://www.denoserverless.com",
+    "baseurl": "",
+    "repo": "http://github.com/sinevia/www.denoserverless.com",
+    "comments": false,
+    "author": {
+      "name": "Sinevia Ltd"
+    },
+    "og_locale": "en_US"
+  }

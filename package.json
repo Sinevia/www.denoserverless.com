@@ -7,6 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env ELEVENTY_ENV=dev npx @11ty/eleventy --serve --output=docs",
+    "build": "cross-env ELEVENTY_ENV=prod npx @11ty/eleventy --output=docs",
+    "seed": "cross-env ELEVENTY_ENV=seed npx @11ty/eleventy --output=docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +26,8 @@
   "homepage": "https://github.com/Sinevia/www.denoserverless.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.1"
   }
 }
