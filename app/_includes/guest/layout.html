@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>{{ title }} : UUID Registry</title>
+    <title>{{ title }} : Deno Serverless</title>
     <link rel="shortcut icon" href="../favicon.ico" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../shared/main.css" rel="stylesheet" />
@@ -34,7 +34,7 @@
         <tr>
             <td class="Content" align="left" valign="top" style="">
                 <!-- START: Main Content -->
-                {{ content }}
+                {{ content | safe}}
                 <!-- END: Main Content -->
             </td>
         </tr>
