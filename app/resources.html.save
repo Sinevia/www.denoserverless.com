@@ -1,0 +1,15 @@
+---
+layout: guest/layout.html
+title: Resources
+pagination:
+  
+data: globalDataSet.resourceList
+  size: 6
+alias: resource
+---
+
+<ol>
+    {% for item in pagination.items %}
+    <li><a href="{{ item.url | url }}">{{ item.title }}</a></li>
+    {% endfor %}
+</ol>

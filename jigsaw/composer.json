@@ -1,0 +1,14 @@
+{
+    "repositories": [
+        {
+            "name": "henrikbjorn/lurker",
+            "type": "vcs",
+            "url": "https://github.com/lesichkovm/lurker"
+        }
+    ],
+    "require": {
+        "henrikbjorn/lurker": ">=1.3",
+        "tightenco/jigsaw": "^1.3",
+        "consolidation/robo": "^1.4"
+    }
+}

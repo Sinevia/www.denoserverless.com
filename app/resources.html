@@ -1,0 +1,12 @@
+---
+layout: guest/layout.html
+title: Resources
+pagination:
+  data: globalDataSet.myData
+  size: 1
+---
+<ol>
+{%- for item in pagination.items %}
+  <li>{{ item }}</li>
+{% endfor -%}
+</ol>

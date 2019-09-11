@@ -1,85 +1,7 @@
-<!DOCTYPE html>
-<html>
+@extends('_views.guest.layout',['title'=>'Login'])
 
-<head>
-    <meta charset="utf-8" />
-    <title>Login : Deno Serverless</title>
-    <link rel="shortcut icon" href="../favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <!-- START: Styles -->
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=d41d8cd98f00b204e980">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet" />
-    <link href="/shared/css/main.css" rel="stylesheet" />
-    <!-- END: Styles -->
-
-    </head>
-
-<body>
-    <!-- START: Page Wrapper -->
-    <table class="Layout" cellspacing="0" cellpadding="0" style="width:100%;height:100%;">
-        <!-- START: Header -->
-        <tr>
-            <td class="Header" align="center" valign="middle" style="height:1px;">
-                <style>
-                    .navbar .navbar-brand {
-                        font-size: 24px;
-                        margin-right: 40px;
-                    }
-
-                    .navbar .nav-item {
-                        font-size: 14px;
-                    }
-                </style>
-                <style>
-    .navbar .navbar-brand {
-        font-size: 24px;
-        margin-right: 40px;
-    }
-
-    .navbar .nav-item {
-        font-size: 14px;
-    }
-</style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="#/" onclick="return $$.to('/');">
-            <b>Deno Serverless</b>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#/" onclick="return $$.to('/');">
-                        <b>Home </b>
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <!-- END: Account -->
-                <li class="nav-item ">
-                    <a class="nav-link" href="#/auth/login" onclick="return $$.to('auth/login');">
-                        <b>Login</b>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>            </td>
-        </tr>
-        <!-- END: Header -->
-
-        <!-- START: Content-->
-        <tr>
-            <td class="Content" align="left" valign="top" style="">
-                <!-- START: Main Content -->
-                <!-- START: Content -->
+@section('body')
+<!-- START: Content -->
 <div class="container">
     <br />
     <br />
@@ -160,51 +82,13 @@
     </div>
 </div>
 <!-- END: Content -->
-                <!-- END: Main Content -->
-            </td>
-        </tr>
-        <!-- END: Content -->
+@endsection
 
-        <!-- START: Footer -->
-        <tr>
-            <td class="Footer" align="center" valign="middle" style="height:80px;">
-
-            </td>
-        </tr>
-        <!-- END: Footer -->
-    </table>
-    <!-- END: Page Wrapper -->
-
-    <!-- START: Scripts -->
-    <script src="/shared/js/config.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@8"> </script>
-    <script src="https://cdn.jsdelivr.net/gh/lesichkovm/web@2.0.0/initialize.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/lesichkovm/cell@1.5.0/cell.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/lesichkovm/webicons@v1.4.0/webicons.ionicons.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/lesichkovm/webicons@v1.4.0/webicons.fontawesome.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/lesichkovm/webicons@v1.4.0/webicons.typicons.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/lesichkovm/webicons@v1.4.0/webicons.runtime.js"></script>
-    <!-- END: Scripts -->
-
-    <script>
-        $(function() {
-            if ($$.getUser() !== null) {
-                $$.to('user/home.html');
-            }
-        });
-        $(function() {
-            setTimeout(function() {
-                $('#alert-area').hide();
-            }, 15000);
-        });
-    </script>
-
-    <script>
+@push('scripts')
+<script>
     /**
      * Validate Login Form
-     * @returns  {Boolean}
+     * @returns {Boolean}
      */
     function loginFormValidate() {
         var email = $.trim($('input[name=email]').val());
@@ -252,19 +136,4 @@
         $("#email").focus();
     });
 </script>
-
-    <!-- START: StatCounter -->
-    <!-- Start of Statcounter code -->
-<script type="text/javascript">
-    var sc_project = 12096331;
-    var sc_invisible = 1;
-    var sc_security = "e3650438";
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript>
-    <img class="statcounter" src="https://c.statcounter.com/12096331/0/e3650438/1/" alt="" />
-</noscript>
-<!-- End of Statcounter Code -->    <!-- END: StatCounter -->
-</body>
-
-</html>
+@endpush

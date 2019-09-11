@@ -1,0 +1,17 @@
+{
+    "resources": {
+        "item":{
+            "name": "task-runner",
+            "descriptions": "Task runner for Deno. Write tasks just like NPM scripts.",
+            "url": "https://github.com/jinjor/deno-task-runner",
+            "categories": [
+                "Tools"
+            ],
+            "tags": [
+                "tools",
+                "tasks",
+                "runner"
+            ]
+        }
+    }
+}

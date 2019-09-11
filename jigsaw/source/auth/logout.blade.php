@@ -1,3 +1,8 @@
+---
+layout: guest/layout.html
+title: Logout
+---
+
 <!-- START: Content -->
 <div class="container">
     <br />

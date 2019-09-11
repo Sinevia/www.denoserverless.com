@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Home : Deno Serverless</title>
+    <title>{{ $title??'Undefined' }} : Deno Serverless</title>
     <link rel="shortcut icon" href="../favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- START: Styles -->
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=d41d8cd98f00b204e980">
+    <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" rel="stylesheet" />
     <link href="/shared/css/main.css" rel="stylesheet" />
     <!-- END: Styles -->
 
-    </head>
+    @stack('styles')
+</head>
 
 <body>
     <!-- START: Page Wrapper -->
@@ -33,45 +34,8 @@
                         font-size: 14px;
                     }
                 </style>
-                <style>
-    .navbar .navbar-brand {
-        font-size: 24px;
-        margin-right: 40px;
-    }
-
-    .navbar .nav-item {
-        font-size: 14px;
-    }
-</style>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <a class="navbar-brand" href="#/" onclick="return $$.to('/');">
-            <b>Deno Serverless</b>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="#/" onclick="return $$.to('/');">
-                        <b>Home </b>
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <!-- END: Account -->
-                <li class="nav-item ">
-                    <a class="nav-link" href="#/auth/login" onclick="return $$.to('auth/login');">
-                        <b>Login</b>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>            </td>
+                @include('_views/guest/partials/header')
+            </td>
         </tr>
         <!-- END: Header -->
 
@@ -79,38 +43,7 @@
         <tr>
             <td class="Content" align="left" valign="top" style="">
                 <!-- START: Main Content -->
-                <style>
-    section#SectionHero {
-        padding: 40px;
-        background: #efe;
-    }
-
-    section#SectionHero h1 {
-        padding: 40px;
-        color: #333;
-    }
-
-    section#SectionEnroll {
-        padding: 40px;
-        background: white;
-    }
-</style>
-<section id="SectionHero">
-    <div class="container">
-        <h1>
-            Build Serverless Apps with Deno
-        </h1>
-    </div>
-</section>
-<section id="SectionEnroll">
-    <div class="container">
-        <p>
-            <a href="https://forms.gle/uRJgBQ9b3sbZihzM8" target="_blank" class="btn btn-lg btn-warning">
-                Express interest to be informed when the service starts
-            </a>
-        </p>
-    </div>
-</section>
+                @yield('body')
                 <!-- END: Main Content -->
             </td>
         </tr>
@@ -152,19 +85,11 @@
         });
     </script>
 
-    
+    @stack('scripts')
+
     <!-- START: StatCounter -->
-    <!-- Start of Statcounter code -->
-<script type="text/javascript">
-    var sc_project = 12096331;
-    var sc_invisible = 1;
-    var sc_security = "e3650438";
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript>
-    <img class="statcounter" src="https://c.statcounter.com/12096331/0/e3650438/1/" alt="" />
-</noscript>
-<!-- End of Statcounter Code -->    <!-- END: StatCounter -->
+    @include('_views/shared/statcounter')
+    <!-- END: StatCounter -->
 </body>
 
 </html>
