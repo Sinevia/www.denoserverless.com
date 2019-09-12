@@ -1,3 +1,5 @@
 node_modules
 deno/jigsaw/vendor/
 vendor/
+npm-debug.log
+package-lock.json
