@@ -10,6 +10,17 @@ class RoboFile extends \Robo\Tasks
     private $host = 'localhost';
     private $port = '32680';
 
+    /**
+     * Build
+     */
+    function build()
+    {
+        $this->taskExec('vendor/bin/jigsaw')->arg('build')->run();
+    }
+
+    /**
+     * Deploy
+     */
     function deploy()
     {
         $this->_cleanDir([__DIR__ . '/docs']);
@@ -17,26 +28,10 @@ class RoboFile extends \Robo\Tasks
 
         $this->taskExec('git add .; git commit -m "Updates"; git push origin master;')->run();
     }
-    function watch()
-    {
-        $this->taskWatch()
-            ->monitor(
-                'composer.json',
-                function () {
-                    $this->taskComposerUpdate()->run();
-                }
-            )->monitor(
-                'source',
-                function () {
-                    $this->build();
-                },
-                \Lurker\Event\FilesystemEvent::ALL
-            )->run();
-    }
-    function build()
-    {
-        $this->taskExec('vendor/bin/jigsaw')->arg('build')->run();
-    }
+
+    /**
+     * Serve
+     */
     function serve()
     {
         $url = $this->host . ':' . $this->port;
@@ -57,6 +52,30 @@ class RoboFile extends \Robo\Tasks
             ->option('port', $this->port)
             ->run();
     }
+
+    /**
+     * Watch
+     */
+    function watch()
+    {
+        $this->taskWatch()
+            ->monitor(
+                'composer.json',
+                function () {
+                    $this->taskComposerUpdate()->run();
+                }
+            )->monitor(
+                'source',
+                function () {
+                    $this->build();
+                },
+                \Lurker\Event\FilesystemEvent::ALL
+            )->run();
+    }
+
+    /**
+     * Is it Windows OS?
+     */
     private static function isWindows()
     {
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
