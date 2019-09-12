@@ -15,7 +15,7 @@ class RoboFile extends \Robo\Tasks
         $this->_cleanDir([__DIR__ . '/docs']);
         $this->_copyDir(__DIR__ . '/build_local', __DIR__ . '/docs');
 
-        $this->taskExec('gcp')->run();
+        $this->taskExec('git add .; git commit -m "Updates"; git push origin master;')->run();
     }
     function watch()
     {

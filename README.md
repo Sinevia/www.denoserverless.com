@@ -1,5 +1,10 @@
 # www.denoserverless.com
 
-npm install --save-dev @11ty/eleventy
-npx @11ty/eleventy --output=docs
-npx @11ty/elevey --serve --watch --output=docs
+1. Watch for changes and build
+robo watch
+
+2. Open browser and serve
+robo serve
+
+3. Deploy
+robo deploy
