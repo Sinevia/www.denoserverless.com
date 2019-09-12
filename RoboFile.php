@@ -12,8 +12,8 @@ class RoboFile extends \Robo\Tasks
 
     function deploy()
     {
-        $this->_cleanDir(['../docs']);
-        $this->_copyDir('build_local', '../docs');
+        $this->_cleanDir([__DIR__ . '/docs']);
+        $this->_copyDir(__DIR__ . '/build_local', __DIR__ . '/docs');
 
         $this->taskExec('gcp')->run();
     }
