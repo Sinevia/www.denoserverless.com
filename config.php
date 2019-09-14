@@ -1,4 +1,5 @@
 <?php
+
 function resources()
 {
     $dataFile = __DIR__ . '/data/resources.csv';
@@ -10,6 +11,7 @@ function resources()
     }
     return $data;
 }
+
 return [
     'production' => false,
     'baseUrl' => '',
