@@ -1,0 +1,11 @@
+id,title,type,description,url
+20190912222120560485,Deno-serverless-poc,code,Deno image for Google Cloud Run. This repo looks at the possibilities of a Serverless runtime for Deno.,https://github.com/denoserverless/deno-serverless-poc
+20190912222505680762,Write AWS Lambda function in Deno,article,This guide describes how to write AWS Lambda function in Deno v0.4.0. ,https://dev.to/kt3k/write-aws-lambda-function-in-deno-4b20
+20190912223616404682,Ryan Dahl is fixing his Node.js design regrets with Deno,article,"Sometimes, we make mistakes. When we do, it’s important to fix them. But what happens when your mistakes are a part of one of the most popular run-time environments in the world?",https://jaxenter.com/ryan-dahl-fixing-node-deno-146190.html
+20190912225845560025,Hackference 2018: Deno,article,Deno mentioned on Hackference 2018,https://www.jvt.me/posts/2018/12/09/hackference-2018/
+20190912230641354013,Deno Twitter,link,The official Twitter account for Deno,https://twitter.com/deno_land
+20190912230855991980,Deno Dev Channel,link,A dev channel dicussing Deno,https://dev.to/t/deno/
+20190912231311776109,Deno News Site,link,"Deno newsletter website. Described as weekly synthesis on Deno related stuff. Releases, articles, news and resources.",https://deno.news/
+20190912232057104427,Servest,code,Serve API is similar to deno_std@v0.17.0 but has different implementation. Some progressive features for HTTP/1.1 server are implemented.,https://github.com/keroxp/servest
+20190912232525803100,"What is Deno, and how is it different from Node.js?",article,"With it’s decentralized approach, Deno takes the necessary step of freeing the JavaScript ecosystem from the centralized package registry that is npm.",https://blog.logrocket.com/what-is-deno/
+20190912233215625238,Deno Package,tool,Utility proxy that allows to use third-party libraries which are stored on GitHub in Deno,https://denopkg.com/

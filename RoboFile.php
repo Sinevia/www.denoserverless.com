@@ -15,6 +15,13 @@ class RoboFile extends \Robo\Tasks
      */
     function build()
     {
+        $this->taskExec('libreoffice')
+            ->option('headless')
+            ->option('invisible')
+            ->option('convert-to', 'csv')
+            ->option('outdir', __DIR__ . '/data')
+            ->arg(__DIR__ . '/data/resources.ods')
+            ->run();
         $this->taskExec('vendor/bin/jigsaw')->arg('build')->run();
     }
 
@@ -66,6 +73,12 @@ class RoboFile extends \Robo\Tasks
                 }
             )->monitor(
                 'source',
+                function () {
+                    $this->build();
+                },
+                \Lurker\Event\FilesystemEvent::ALL
+            )->monitor(
+                'data/resources.ods',
                 function () {
                     $this->build();
                 },
