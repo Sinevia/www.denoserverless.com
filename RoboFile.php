@@ -1,4 +1,7 @@
 <?php
+require_once 'vendor/autoload.php';
+
+use Lurker\Event\FilesystemEvent;
 
 /**
  * This is project's console commands configuration for Robo task runner.
@@ -76,13 +79,13 @@ class RoboFile extends \Robo\Tasks
                 function () {
                     $this->build();
                 },
-                \Lurker\Event\FilesystemEvent::ALL
+                FilesystemEvent::ALL
             )->monitor(
                 'data/resources.ods',
                 function () {
                     $this->build();
                 },
-                \Lurker\Event\FilesystemEvent::ALL
+                FilesystemEvent::ALL
             )->run();
     }
 
