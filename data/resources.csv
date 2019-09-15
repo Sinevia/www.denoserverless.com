@@ -13,3 +13,10 @@ id,title,type,description,url
 From async-await to ArrayBuffers, the JavaScript language has changes significantly in the decade since Node.js was designed. Deno takes advantage of these developments and incorporate lessons learned in the development of Node to provide a new JavaScript platform built on V8 and Rust. This talk will teach the audience how to get started with Deno.
 Keynotes: https://www.slideshare.net/JSFestUA/js-fest-2019-ryan-dahl-deno-a-new-way-to-javascript",https://www.youtube.com/watch?v=z6JRlx5NC9E
 20190914065532,Deno vs Node | Is this the future of Nodejs? | Inspired by Ryan Dahl,video,"From CodeIndia, Raman Choudhary, a 24 years old software engineer from Bangalore. He is here to change the perception that programming is boring.  He makes fun tech videos where he teaches latest and best in tech industry.",https://www.youtube.com/watch?v=k2Ko38kVQMQ
+20190914235912,Getting started with Deno ,article,There still a long time until Deno reachs a production-ready state. But Deno is on the right path in order to be a better Javascript runtime than Node.js.,https://dev.to/wuz/getting-started-with-deno-e1m
+20190915001220,"First thoughts on Deno, the JavaScript/TypeScript run-time",article,"To wrap up Deno is great and a major step forward. What Node doesn’t dare do (a major breaking change for them), Deno can and has done. 
+
+This is leading us to a much cleaner, much simpler solution which is aligned perfectly with browsers. This is the way things should be.
+
+I do hope Deno gets plenty of care, cleanup and so on. Eventually, I’d like to see Deno at a point where we can all use it without any issues and start enjoying having a single code base for all platforms.",https://43081j.com/2019/01/first-look-at-deno
+20190915004231,A Deno guide for Node.js developers ,article,"Node vs Deno. If you come from Node.js, you might find that a lot of things are very similar in Deno, here we show some features that Deno and Node.js have in common, it would be great for learning purpose.",https://github.com/egoist/node-vs-deno

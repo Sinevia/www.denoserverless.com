@@ -33,8 +33,20 @@ class RoboFile extends \Robo\Tasks
      */
     function deploy()
     {
+        $this->taskExec('libreoffice')
+            ->option('headless')
+            ->option('invisible')
+            ->option('convert-to', 'csv')
+            ->option('outdir', __DIR__ . '/data')
+            ->arg(__DIR__ . '/data/resources.ods')
+            ->run();
+        $this->taskExec('vendor/bin/jigsaw')
+            ->arg('build')
+            ->arg('production')
+            ->run();
+
         $this->_cleanDir([__DIR__ . '/docs']);
-        $this->_copyDir(__DIR__ . '/build_local', __DIR__ . '/docs');
+        $this->_copyDir(__DIR__ . '/build_production', __DIR__ . '/docs');
 
         $this->taskExec('git add .; git commit -m "Updates"; git push origin master;')->run();
     }

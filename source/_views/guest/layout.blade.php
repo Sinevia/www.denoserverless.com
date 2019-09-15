@@ -39,6 +39,14 @@
         </tr>
         <!-- END: Header -->
 
+        <!-- START: Ads -->
+        <tr>
+            <td class="Ads" align="center" valign="middle" style="height:1px;">
+                @include('_views/guest/partials/ads')
+            </td>
+        </tr>
+        <!-- END: Ads -->
+
         <!-- START: Content-->
         <tr>
             <td class="Content" align="left" valign="top" style="">
