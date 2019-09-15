@@ -12,6 +12,6 @@ $isProduction = $page['production'];
         </script>
     <?php } ?>
     <?php if ($isProduction == false) { ?>
-        NON PRODUCTION ADS
+        ADS WILL BE VISIBLE HERE ON PRODUCTION WEBSITE
     <?php } ?>
 </div>
