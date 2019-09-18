@@ -1,19 +1,18 @@
 /.idea/
 /.vscode/
 /build_local/
+/build_staging/
+/build_production/
 /cache/
+/data/.~lock.resources.ods#
+/deno/jigsaw/vendor/
 /node_modules/
 /vendor/
-deno/jigsaw/vendor/
 npm-debug.log
 package-lock.json
 npm-debug.log
 yarn-error.log
-
 # Optional ignores
-/build_local/
-/build_staging/
-/build_production/
 # /source/assets/build/css/
 # /source/assets/build/fonts/
 # /source/assets/build/js/
